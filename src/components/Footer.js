@@ -1,15 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {  Icon } from 'antd'
 
 class FooterC extends Component {
-  render() {
-    
+  render () {
     return (
-      < div className='Footer_Div' >
-       <div> some icons </div>
-       <span className='Nav_Span'> Team </span>
-      </div >
-    );
+      <div className='Footer_Div'>
+
+        <div className='Footer_IconD'>
+          <Icon type='skype' theme='outlined' />
+          <Icon type='twitter' theme='outlined' />
+          <Icon type='linkedin' theme='outlined' />
+          <Icon type='google' theme='outlined' />
+          <Icon type='instagram' theme='outlined' />
+          <Icon type='github' theme='outlined' />
+        </div> <span className='Footer_Span'> Team </span>
+      </div>
+    )
   }
 }
 
-export default FooterC; 
+export default FooterC

@@ -5,20 +5,24 @@ import CarouselC from './components/Carousel'
 import AboutUs from '../src/components/AboutUs'
 import Targets from '../src/components/Targets'
 import FooterC from '../src/components/Footer'
+import GetIn from './components/GetIn'
+import Achieved from './components/Achieved'
 
 class App extends Component {
   render () {
     return (
       <div className='App'>
-
+        <Nav />
+        <CarouselC />
         <div className='Background_img'>
-          <Nav />
-          <CarouselC />
+
           <AboutUs />
           <Targets />
-          <FooterC />
+          <GetIn />
+          <Achieved />
 
         </div>
+        <FooterC />
       </div>
     )
   }

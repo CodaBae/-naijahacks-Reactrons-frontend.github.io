@@ -5,11 +5,9 @@ import { Card } from 'antd'
 const { Meta } = Card
 const contentShop = (
   <div>
-    <p>Order Your Veggies </p>
     <p>Order Your SeaFood</p>
     <p>Order LifeStock</p>
     <p>Order Your Farming tools</p>
-    <p>Order your Pets</p>
 
   </div>
 )
@@ -17,7 +15,7 @@ const contentThink = (
   <div>
 
     <p>Contect With a Farming, Start A StartUp</p>
-    <p>Contect With a StockMan,  Start A StartUp</p>{' '}
+    <p>Contect With a StockMan,  Start A StartUp</p>
   </div>
 )
 const ContentGrow = (
@@ -34,7 +32,7 @@ class Targets extends Component {
         <h1>Vision</h1>
 
         <div className='Target_Div'>
-          <Popover content={contentShop} title='Title'>
+          <Popover content={contentShop} title='Shop'>
             <div>
               <div>
                 {' '}<Card
@@ -55,7 +53,7 @@ class Targets extends Component {
 
             </div>
           </Popover>
-          <Popover content={contentThink} title='Title'>
+          <Popover content={contentThink} title='Invest'>
             <div>
               <div>
                 {' '}<Card
@@ -69,14 +67,14 @@ class Targets extends Component {
                                         />
                                     }
                                 >
-                  <Meta title='Think' style={{ width: 240 }} />
+                  <Meta title='Invest' style={{ width: 240 }} />
                 </Card>
 
               </div>
 
             </div>
           </Popover>
-          <Popover content={ContentGrow} title='Title'>
+          <Popover content={ContentGrow} title='Grow'>
             <div>
               <div>
                 {' '}<Card

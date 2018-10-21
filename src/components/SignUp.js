@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { Header, Icon, Modal, Button, Input } from 'semantic-ui-react'
-import ModalExampleControlled1 from './modal1'
-import Axios from 'axios'
 
-export default class ModalExampleControlled extends Component {
+export default class SignUp extends Component {
   state = {
     name: '',
     phone: '',
@@ -114,125 +111,97 @@ export default class ModalExampleControlled extends Component {
   render () {
     return (
       <div>
-        <Modal
-          trigger={
-            <button onClick={this.handleOpen}>
-              {' '}
-                            Sign Up{' '}
-            </button>
-                    }
-          open={this.state.modalOpen}
-          onClose={this.handleClose}
-          basic
-          size='small'
-                >
-          <Header />
-          <Modal.Content>
-            <div className='ContactDM'>
-              <form name='contactform' className='contactform' onSubmit={this.handleSubmit}>
-                <h1 className='modal'> Sign Up </h1>
+        <form>
 
-                <h1 className='SignupT'>Personal Details</h1>
-                <h5 className='ContactH'>Nickname</h5>
-                <Input
-                  type='text'
-                  name='name'
-                  value={this.state.name}
-                  onChange={this.handleChangeName}
-                  placeholder='Nickname'
-                  className='ContactIM'
-                  required
-                                />
+          <input
+            type='text'
+            name='name'
+            value={this.state.name}
+            onChange={this.handleChangeName}
+            placeholder='Nickname'
+            className='ContactIM'
+            required
+                    />
 
-                <br />
-                <h5 className='ContactH'>phone</h5>
-                <Input
-                  type='text'
-                  name='phone'
-                  value={this.state.phone}
-                  onChange={this.handleChangePhone}
-                  placeholder='Phone'
-                  className='ContactIM'
-                  required
-                                />
+          <br />
+          <h5 className='ContactH'>phone</h5>
+          <input
+            type='text'
+            name='phone'
+            value={this.state.phone}
+            onChange={this.handleChangePhone}
+            placeholder='Phone'
+            className='ContactIM'
+            required
+                    />
 
-                <br />
-                <h5 className='ContactH'>email</h5>
+          <br />
+          <h5 className='ContactH'>email</h5>
 
-                <Input
-                  type='text'
-                  name='email'
-                  value={this.state.email}
-                  onChange={this.handleChangeEmail}
-                  placeholder='Email'
-                  className='ContactIM'
-                  required
-                                />
+          <input
+            type='text'
+            name='email'
+            value={this.state.email}
+            onChange={this.handleChangeEmail}
+            placeholder='Email'
+            className='ContactIM'
+            required
+                    />
 
-                <br />
-                <h5 className='ContactH'>Hobbies</h5>
+          <br />
+          <h5 className='ContactH'>Hobbies</h5>
 
-                <Input
-                  type='text'
-                  name='hobbies'
-                  value={this.state.hobbies}
-                  onChange={this.handleChangeHobbies}
-                  placeholder='hobbies'
-                  className='ContactIM'
-                  required
-                                />
+          <input
+            type='text'
+            name='hobbies'
+            value={this.state.hobbies}
+            onChange={this.handleChangeHobbies}
+            placeholder='hobbies'
+            className='ContactIM'
+            required
+                    />
 
-                <br />
+          <br />
 
-                <h5 className='ContactH'>Password</h5>
-                <Input
-                  type='text'
-                  name='password'
-                  value={this.state.pasword}
-                  onChange={this.handleChangePassword}
-                  placeholder='Password'
-                  className='ContactIM'
-                  required
-                                />
-                <br />
-                <h1 className='SignupT'>Account Details</h1>
-                <h5 className='ContactH'>Account Number</h5>
-                <Input
-                  type='text'
-                  name='acctNo'
-                  value={this.state.acctNo}
-                  onChange={this.handleChangeAcctNo}
-                  placeholder='Account Number'
-                  className='ContactIM'
-                  required
-                                />
-                <br />
-                <h5 className='ContactH'>Bank Details</h5>
-                <Input
-                  type='text'
-                  name='bank'
-                  value={this.state.bank}
-                  onChange={this.handleChangeBank}
-                  placeholder='Bank Details'
-                  className='ContactIM'
-                  required
-                                />
+          <h5 className='ContactH'>Password</h5>
+          <input
+            type='text'
+            name='password'
+            value={this.state.pasword}
+            onChange={this.handleChangePassword}
+            placeholder='Password'
+            className='ContactIM'
+            required
+                    />
+          <br />
+          <h1 className='SignupT'>Account Details</h1>
+          <h5 className='ContactH'>Account Number</h5>
+          <input
+            type='text'
+            name='acctNo'
+            value={this.state.acctNo}
+            onChange={this.handleChangeAcctNo}
+            placeholder='Account Number'
+            className='ContactIM'
+            required
+                    />
+          <br />
+          <h5 className='ContactH'>Bank Details</h5>
+          <input
+            type='text'
+            name='bank'
+            value={this.state.bank}
+            onChange={this.handleChangeBank}
+            placeholder='Bank Details'
+            className='ContactIM'
+            required
+                    />
 
-                <Button color='black' inverted value='Submit'>
-                  <Icon name='checkmark' /> Submit!
-                                </Button>
-              </form>
+          <button color='black' inverted value='Submit'>
+            {/* <Icon name='checkmark' /> Submit! */}
+                    </button>
+        </form>
 
-            </div>
-          </Modal.Content>
-          <Modal.Actions>
-            <Button color='green' inverted value='Submit' onClick={this.handleClose}>
-              <Icon name='checkmark' /> Done!
-                        </Button>
-          </Modal.Actions>
-        </Modal>
-
-        <ModalExampleControlled1 />
       </div>
     )
   }

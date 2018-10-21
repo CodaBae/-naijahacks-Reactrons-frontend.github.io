@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Affix } from 'antd'
 import BottonC from './BottonC'
+import {Link } from 'react-router-dom'
 
 class Nav extends Component {
   state = {
@@ -10,6 +11,7 @@ class Nav extends Component {
   render () {
     return (
       <div>
+      
         <Affix offsetTop={this.state.top}>
           <div className='Nav_Div'>
             <div>
@@ -19,7 +21,9 @@ class Nav extends Component {
             </div>
 
             <span className='Nav_Span'>
+            <Link to='Login'>
               <BottonC />
+              </Link>
             </span>
           </div>
         </Affix>
