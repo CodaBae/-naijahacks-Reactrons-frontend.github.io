@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Modal, Button, Icon } from 'antd'
-import { Link } from 'react-router-dom'
+import { Button } from 'antd'
 
 export default class CallFarmer extends Component {
   state = {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Modal, Button, Icon } from 'antd'
-import { Link } from 'react-router-dom'
+import { Modal, Button } from 'antd'
 
 export default class SignUp extends Component {
   state = {
