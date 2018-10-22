@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Carousel } from 'antd'
 import { Input, Button, Icon } from 'antd'
 import { Link } from 'react-router-dom'
+import SignUp from './SignUp'
 
 export default class Login extends Component {
   render () {
@@ -34,7 +35,7 @@ export default class Login extends Component {
 
                 <div className=''>
                   <Link to='DashBoard'>
-                    <Button type='dashed' block>Dashed</Button>
+                    <Button type='dashed' block>Ride On</Button>
                   </Link>
                 </div>
 
@@ -48,10 +49,8 @@ export default class Login extends Component {
                 </div>
 
               </form>
-              <Link to='SignUp'>
 
-                <p> Dont have an account? SignUp</p>
-              </Link>
+             <SignUp />
             </div>
           </div>
         </div>

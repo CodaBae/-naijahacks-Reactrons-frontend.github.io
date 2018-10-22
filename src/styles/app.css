@@ -13,7 +13,20 @@ body {
 
 	margin-top: -6%;
 
-	margin-bottom: 3%;
+	margin-bottom: 5%;
+}
+.ant-modal-content {
+	position: relative;
+	background-color: #fff;
+	border: 0;
+	border-radius: 4px;
+	background-clip: padding-box;
+	-webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	margin-top: -7%;
+}
+.SignUp_Div {
+	cursor: pointer;
 }
 .GetIn_span {
 	color: white;
@@ -36,9 +49,69 @@ body {
 	font-size: 2rem;
 	color: white;
 	cursor: pointer;
-
+}
+.ant-btn-primary {
+	color: #fff;
+	background-color: #207302;
+	border-color: #207302;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+}
+.ant-btn:hover {
+	border: 1px solid #207302;
+	background: transparent;
+	color: #207302;
 }
 
+.ant-modal-close {
+	cursor: pointer;
+	border: 0;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+	-webkit-transition: color .3s;
+	-o-transition: color .3s;
+	transition: color .3s;
+	color: rgba(0, 0, 0, 0.45);
+	outline: 0;
+	padding: 0;
+	padding: 1%;
+	font-size: 0rem;
+}
+.ant-btn {
+	cursor: default;
+}
+.ant-modal-body {
+	background: url('../Img/Team.jpeg');
+	padding: 24px;
+	font-size: 14px;
+	line-height: 1.5;
+	word-wrap: break-word;
+	background-repeat: no-repeat;
+	position: relative;
+	background-size: cover;
+}
+.ant-btn,
+.ant-btn:active,
+.ant-btn:focus {
+	outline: 0;
+	color: #207302;
+	background: #207202;
+	border: 1px solid #207302;
+}
+.ant-modal-footer {
+	border-top: 1px solid #429c02;
+	padding: 10px 16px;
+	text-align: right;
+	border-radius: 0 0 4px 4px;
+	background: #207202;
+}
 .Footer_Span {
 	margin-top: 2%;
 	color: #fff;
@@ -46,12 +119,80 @@ body {
 	margin-right: 6%;
 	cursor: pointer;
 }
+.ant-card-meta-title {
+	font-size: 16px;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color: rgba(0, 0, 0, 0.85);
+	font-weight: 500;
+	text-align: center;
+}
+.ant-modal-header {
+	padding: 16px 24px;
+	border-radius: 4px 4px 0 0;
+	background: #4ebc00;
+	color: rgba(0, 0, 0, 0.65);
+	border-bottom: 1px solid #4ebc00;
+}
+h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: 500;
+	color: white;
+	text-align: center;
+	margin: 2%;
+	margin-top: 2%;
+	margin-top: 0%;
+	font-weight: 1;
+	font-size: 3rem;
+}
+
+.Team_Div {
+	width: 25%;
+	box-shadow: 1px 1px 1px 1px #207202;
+}
 .GetIn_div {
 	border-left: 3px solid white;
 	margin: 5%;
 	height: 4.5rem;
 	padding: 1%;
 }
+.Team_Img {
+	width: 100%;
+}
+.Call_Div {
+	margin: 4%;
+	background: white;
+	height: 34rem;
+	box-shadow: 1px 1px 1px 1px rgb(119, 117, 117);
+	padding: 1%;
+}
+.Call_Input {
+	margin: 3%;
+
+	padding: 2%;
+	border: 1px solid #4ebc00;
+	width: 70%;
+	margin-left: 15%;
+}
+.CallH {
+	font-family: 'Merienda One', sans-serif;
+	margin-bottom: -2%;
+	font-weight: 1;
+	margin-left: 15%;
+	color: black;
+}
+.Call_T {
+	margin: 3%;
+
+	padding: 5%;
+	border: 1px solid #4ebc00;
+	width: 70%;
+	margin-left: 15%;
+}
+
 .Background_img {
 	background-image: url('../Img/ryouFarm.jpeg');
 	background-repeat: no-repeat;
@@ -142,6 +283,11 @@ a:hover {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 7%;
+}
+.Team_MDiv {
+	display: flex;
+	justify-content: space-around;
+	margin: 5%;
 }
 .Target_Img {
 	width: 65%;
@@ -336,8 +482,16 @@ h1 {
 .ContactIM {
 	padding: 2%;
 	margin-bottom: 5%;
-	width: 100%;
+	width: 80%;
 	margin-top: 2%;
+	margin-left: 10%;
+}
+.SellT{
+	padding: 4%;
+	margin-bottom: 5%;
+	width: 80%;
+	margin-top: 2%;
+	margin-left: 10%;
 }
 
 .ContactDM {
@@ -375,9 +529,16 @@ h1 {
 input {
 	margin-bottom: 5px;
 	height: 20px;
-	border: 1px solid #d8d8d8;
+	border: 1.5px solid white;
 	padding: 3px;
 	background: transparent;
+}
+.ContactH {
+	font-family: 'Merienda One', sans-serif;
+	margin-bottom: -0.9%;
+	font-weight: 1;
+	margin-left: 10%;
+	color: white;
 }
 
 .ui.input > input {

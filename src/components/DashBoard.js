@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
+import { Modal, Button } from 'antd'
+
 import Seeds from './Seeds'
 import Seafood from './Seafood'
 import LifeStock from './LifeStock'
 import Poultry from './Poultry'
 import FarmingT from './FarmingT'
 import CallFarmer from './CallFarmer'
-import CallStockMan from './CallStockMan'
+import CallStockman from './CallStockman'
 import { Link, Route } from 'react-router-dom'
 
 const { Header, Content, Footer, Sider } = Layout
@@ -15,77 +17,79 @@ const SubMenu = Menu.SubMenu
 class DashBoard extends Component {
   state = {
     collapsed: false,
-    Seeds:false,
-    Seafood:false,
-    LifeStock:false,
-    Poultry:false,
-    FarmingT:false
+    Seeds: false,
+    Seafood: false,
+    LifeStock: false,
+    Poultry: false,
+    FarmingT: false,
+    loading: false,
+    visible: false
+  }
 
+  showModal = () => {
+    this.setState({
+      visible: true
+    })
+  }
 
+  handleOk = () => {
+    this.setState({ loading: true })
+    setTimeout(() => {
+      this.setState({ loading: false, visible: false })
+    }, 3000)
+  }
+
+  handleCancel = () => {
+    this.setState({ visible: false })
   }
 
   onCollapse = collapsed => {
     console.log(collapsed)
     this.setState({ collapsed })
   }
-  SetSeedsTrue = () =>{
+  SetSeedsTrue = () => {
     this.setState({
       Seeds: true,
       Seafood: false,
       Poultry: false,
       LifeStock: false,
       FarmingT: false
-          
     })
   }
-  SetSeafoodTrue = () =>{
+  SetSeafoodTrue = () => {
     this.setState({
       Seafood: true,
       Poultry: false,
       Seeds: false,
       LifeStock: false,
-      FarmingT: false,
-          
+      FarmingT: false
     })
   }
-  SetLifeStockTrue = () =>{
+  SetLifeStockTrue = () => {
     this.setState({
-      
       LifeStock: true,
       Poultry: false,
       Seeds: false,
       Seafood: false,
-      FarmingT: false,
-    
-
-      
+      FarmingT: false
     })
   }
-  SetPoultryTrue = () =>{
+  SetPoultryTrue = () => {
     this.setState({
-   
       Poultry: true,
       Seeds: false,
       Seafood: false,
       LifeStock: false,
-      FarmingT: false,
-
-
+      FarmingT: false
     })
-      
   }
-  SetFarmingTTrue = () =>{
+  SetFarmingTTrue = () => {
     this.setState({
-
       FarmingT: true,
       Seeds: false,
       Poultry: false,
       Seafood: false,
-      LifeStock: false,
-
-
-
-      
+      LifeStock: false
     })
   }
 
@@ -102,10 +106,11 @@ class DashBoard extends Component {
             <Menu.Item key='1'>
               <Icon type='pie-chart' />
               <span>
-                <Link to='CallFarmer'>
-                                    Call a Farmer
-                                </Link>
-              </span>
+                {' '}<Link to='CallFarmer'>
+
+                                    Call A Farmer
+                                </Link>{' '}
+              </span>{' '}
             </Menu.Item>
             <Menu.Item key='2'>
               <Icon type='desktop' />
@@ -131,7 +136,76 @@ class DashBoard extends Component {
 
             <Menu.Item key='10'>
               <Icon type='file' />
-              <span><Link to='Sell'>Sell</Link></span>
+              <span type='primary' onClick={this.showModal}>
+                                Sell
+                            </span>
+              <Modal
+                visible={this.state.visible}
+                title='Sell'
+                onOk={this.handleOk}
+                onCancel={this.handleCancel}
+                width='70rem'
+                footer={[
+                  <Button key='back' onClick={this.handleCancel}>Return</Button>,
+                  <Button key='submit' type='primary' onClick={this.handleOk}>
+                                        ok
+                                    </Button>
+                ]}
+                            >
+                <div>
+
+                  <h2>Sell your product on our Platform</h2>
+
+                  <form name='contactform' className='contactform' onSubmit={this.handleSubmit}>
+                    {' '}<h5 className='ContactH'>Name</h5>
+
+                    <input
+                        type='text'
+                        name='name'
+                        value={this.state.name}
+                        onChange={this.handleChangeName}
+                        placeholder='Name'
+                        className='ContactIM'
+                        required
+                                        />
+
+                    {this.state.nameE ? <p>{this.state.nameE}</p> : ''}
+                    <br />
+
+                    <h5 className='ContactH'>Phone</h5>
+                    <input
+                        type='text'
+                        name='phone'
+                        value={this.state.phone}
+                        onChange={this.handleChangePhone}
+                        placeholder='Phone'
+                        className='ContactIM'
+                        required
+                                        />
+
+                    {this.state.phoneE ? <p>{this.state.phoneE}</p> : ''}
+                    <br />
+
+                   
+                    <h5 className='ContactH'>Tell Us About You</h5>
+                    <input
+                        type='text'
+                        name='acctNo'
+                        value={this.state.acctNo}
+                        onChange={this.handleChangeAcctNo}
+                        placeholder='What would you like to Sell'
+                        className='SellT'
+                        required
+                                        />
+                    {this.state.aboutE ? <p>{this.state.aboutE} </p> : ''}
+                    <br />
+
+                    <Button value='Submit' type='dashed' block>Ride On</Button>
+
+                  </form>
+
+                </div>
+              </Modal>
             </Menu.Item>
 
           </Menu>
@@ -149,10 +223,10 @@ class DashBoard extends Component {
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
 
               {this.state.Seeds === true ? <div className='Item_div'><Seeds /> </div> : ''}
-              {this.state.LifeStock === true ? <div className='Item_div'> <LifeStock /> </div>: ''}
+              {this.state.LifeStock === true ? <div className='Item_div'> <LifeStock /> </div> : ''}
               {this.state.Seafood === true ? <div className='Item_div'> <Seafood /> </div> : ''}
-              {this.state.Poultry === true ? <div className='Item_div'><Poultry /> </div>: ''}
-              {this.state.FarmingT === true ? <div className='Item_div'> <FarmingT /> </div>: ''}
+              {this.state.Poultry === true ? <div className='Item_div'><Poultry /> </div> : ''}
+              {this.state.FarmingT === true ? <div className='Item_div'> <FarmingT /> </div> : ''}
 
             </div>
 

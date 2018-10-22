@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {  Icon } from 'antd'
+import Team from'./Team'
 
 class FooterC extends Component {
   render () {
@@ -13,7 +14,7 @@ class FooterC extends Component {
           <Icon type='google' theme='outlined' />
           <Icon type='instagram' theme='outlined' />
           <Icon type='github' theme='outlined' />
-        </div> <span className='Footer_Span'> Team </span>
+        </div> <span className='Footer_Span'> <Team /> </span>
       </div>
     )
   }

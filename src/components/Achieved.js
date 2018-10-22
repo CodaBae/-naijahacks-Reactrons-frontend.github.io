@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Popover } from 'antd'
 import { Card } from 'antd'
 
 const { Meta } = Card
