@@ -6,7 +6,7 @@ class GetIn extends Component {
       <div>
         <div className='GetIn_Header'>
 
-          <span> Get Involed </span>
+          <span> Get Involved </span>
         </div>
         <div className='GetInMD'>
 

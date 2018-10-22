@@ -16,10 +16,10 @@ class Achieved extends Component {
                 hoverable
                 style={{ width: 270 }}
                 cover={
-                  <img src={require('../Img/shop.png')} alt='download me' className='Target_Img' />
+                  <img src={require('../Img/growth.png')} alt='download me' className='Target_Img' />
                                 }
                             >
-                <Meta title='Shop' style={{ width: 240 }} />
+                <Meta title='Economic Growth' style={{ width: 240 }} />
               </Card>
 
             </div>

@@ -5,19 +5,21 @@ class AboutUs extends Component {
     return (
       <div className='About_Div'>
         <h2 className='About_Header'>About Us</h2>
+        <h3 className='About_Text' />
         <h3 className='About_Text'>
-                    dabhshdfiLQFWIUOqeiuwfhy;leoiujidwehfu3wrhufurfhwhewgdwagrwagfuq3iurhyqfyhrufq3ugfruq4frqfuh
-                </h3>
+                    iFarm is a proposed agricultural ecommerce site for buying and selling of any agricultural products and equipments.  .We Connect Buyers to sellers.
+                    {' '}
+        </h3>
+        <h3 className='About_Text' />
+
         <h3 className='About_Text'>
-                    dabhshdfiLQFWIUOqeiuwfhy;leoiujidwehfu3wrhufurfhwhewgdwagrwagfuq3iurhyqfyhrufq3ugfruq4frqfuhq3wu
-                </h3>
-        <h3 className='About_Text'>
-                    dabhshdfiLQFWIUOqeiuwfhy;leoiujidwehfu3wrhufurfhwhewgdwagrwagfuq3iurhyqfyhrufq3ugfruq4frqfuhq3wu
+                    Do you want to start a business that has to do with the agricultual sector? You are at the right place, lets connect you with the right farmer or stockman to help  manage your startup
                 </h3>
 
         <h3 className='About_Text'>
-                    dabhshdfiLQFWIUOqeiuwfhy;leoiujidwehfu3wrhufurfhwhewgdwagrwagfuq3iurhyqfyhrufq3ugfruq4frqfuhq3wufyq
-                </h3>
+                    Are you a business man or woman based on Agricultural products? iFarm gives you the opportunity to sell your products on our platform.  
+                    {' '}
+        </h3>
       </div>
     )
   }

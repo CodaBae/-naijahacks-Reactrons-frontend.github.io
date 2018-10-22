@@ -14,8 +14,8 @@ const contentShop = (
 const contentThink = (
   <div>
 
-    <p>Contect With a Farming, Start A StartUp</p>
-    <p>Contect With a StockMan,  Start A StartUp</p>
+    <p>Connect With a Farming, Start A StartUp</p>
+    <p>Connect With a StockMan,  Start A StartUp</p>
   </div>
 )
 const ContentGrow = (
