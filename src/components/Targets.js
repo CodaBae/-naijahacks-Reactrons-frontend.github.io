@@ -29,7 +29,7 @@ class Targets extends Component {
   render () {
     return (
       <div>
-        <h1>Vision</h1>
+        <h1>Our Services</h1>
 
         <div className='Target_Div'>
           <Popover content={contentShop} title='Shop'>
