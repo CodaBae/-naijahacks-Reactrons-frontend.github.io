@@ -34,8 +34,9 @@ export default class Login extends Component {
                 <br />
 
                 <div className=''>
-                  
+                  <Link to='Dashboard'>
                     <Button type='dashed' block>Ride On</Button>
+                    </Link >
                 </div>
 
                 <div className='IconDF'>
