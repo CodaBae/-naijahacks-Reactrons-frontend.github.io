@@ -8,7 +8,7 @@ import LifeStock from './LifeStock';
 import Poultry from './Poultry';
 import FarmingT from './FarmingT';
 
-import { Link,  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -98,18 +98,20 @@ class DashBoard extends Component {
 				<Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
 					<div className="Logo_d">
 						<img src={require('../Img/logo.png')} alt="download me" className="Header_Img" />
-						<span className="Header_Logo"> iFarm </span>
+						<Link to='home'>
+						<span className="Header_Logo"> farmStore </span>
+						</Link>
 					</div>
 					<Menu theme="dark" defaultSelectedKeys={[ '1' ]} mode="inline">
 						<Menu.Item key="1">
-							<Icon type="pie-chart" />
+							<Icon type="phone" theme="outlined" />{' '}
 							<span>
 								{' '}
 								<Link to="CallFarmer">Call A Farmer</Link>{' '}
 							</span>{' '}
 						</Menu.Item>
 						<Menu.Item key="2">
-							<Icon type="desktop" />
+							<Icon type="phone" theme="outlined" />{' '}
 							<span>
 								<Link to="CallStockMan">Call A StockMan</Link>
 							</span>
@@ -118,7 +120,7 @@ class DashBoard extends Component {
 							key="sub1"
 							title={
 								<span>
-									<Icon type="user" />
+									<Icon type="shopping-cart" theme="outlined" />
 									<span>Shop</span>
 								</span>
 							}
@@ -144,7 +146,7 @@ class DashBoard extends Component {
 						</SubMenu>
 
 						<Menu.Item key="10">
-							<Icon type="file" />
+							<Icon type="dollar" theme="outlined" />{' '}
 							<span type="primary" onClick={this.showModal}>
 								Sell
 							</span>

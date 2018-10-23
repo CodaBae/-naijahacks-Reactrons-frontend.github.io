@@ -16,7 +16,9 @@ class Nav extends Component {
           <div className='Nav_Div'>
             <div>
               <img src={require('../Img/logo.png')} alt='download me' className='Nav_Img' />
-              <span className='Nav_Logo'> iFarm </span>
+              <Link to='home'>
+              <span className='Nav_Logo'> farmStore </span>
+              </Link>
 
             </div>
 

@@ -189,7 +189,10 @@ form span.error {
 	padding: 1%;
 }
 .Team_Img {
+
 	width: 100%;
+	height: 300px;
+
 }
 .Call_Div {
 	margin: 4%;
@@ -349,7 +352,7 @@ p {
 
 .Nav_Logo {
 	font-size: 1.5rem;
-
+cursor: pointer;
 	color: white;
 }
 .ant-carousel {
@@ -728,6 +731,7 @@ element {
 .Header_Logo {
 	font-size: 1.3rem;
 	color: white;
+	cursor: pointer;
 }
 .Logo_d {
 	border-bottom: 1px solid #429c02;

@@ -53,7 +53,7 @@ class Team extends Component {
 
               <div className='Team_Div'>
 
-                <img src={require('../Img/Dog.jpg')} alt='download me' className='Team_Img' />
+                <img src={require('../Img/shalom.jpg')} alt='download me' className='Team_Img' />
 
                 <Meta title='Shalom Mathew' style={{ width: 240 }} />
                 <div className='Team_IconD'>
@@ -68,7 +68,7 @@ class Team extends Component {
 
               <div className='Team_Div'>
 
-                <img src={require('../Img/Dog.jpg')} alt='download me' className='Team_Img' />
+                <img src={require('../Img/Mal.jpeg')} alt='download me' className='Team_Img' />
 
                 <Meta title='Malvan Harry' style={{ width: 240 }} />
                 <div className='Team_IconD'>
@@ -83,7 +83,7 @@ class Team extends Component {
 
               <div className='Team_Div'>
 
-                <img src={require('../Img/Dog.jpg')} alt='download me' className='Team_Img' />
+                <img src={require('../Img/sap.jpg')} alt='download me' className='Team_Img' />
                 <Meta title='Saphire ' style={{ width: 240 }} />
                 <div className='Team_IconD'>
                   <Icon type='twitter' theme='outlined' />

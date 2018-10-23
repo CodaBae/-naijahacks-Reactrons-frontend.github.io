@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, Button } from 'antd'
-
+import {Link} from 'react-router-dom'
 
 export default class SignUp extends Component {
   state = {
@@ -98,7 +98,9 @@ export default class SignUp extends Component {
               className='SellT'
                         />
             <br />
+            <Link to='Dashboard'>
             <Button value='bnt' type='dashed' block>Ride On</Button>
+            </Link>
           </form>
 
         </Modal>
